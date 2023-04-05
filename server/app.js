@@ -11,7 +11,7 @@ const port = process.env.PORT;
 
 require("./connection");
 const userModel = require("./model/schema");
-
+//const defoltData=require("./jeson");
 app.use(express.json());
 
 //app.use(cors());
@@ -22,4 +22,6 @@ app.use(require("./router/auth"));
 
 app.listen(port, () => {
     console.log(`connect my backend surver at ${port} port`);
-})
+});
+
+//defoltData();
