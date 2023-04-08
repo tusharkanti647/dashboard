@@ -1,0 +1,4 @@
+.App > .app_main{
+    display: flex;
+    position: relative;
+}

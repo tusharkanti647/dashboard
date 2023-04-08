@@ -1,10 +1,19 @@
+import NewNav from "./components/heder/NavBar";
+import Sidebar from "./components/sidebar/Sidebar";
 
+import "./App.css";
+import Body from "./components/body/Body";
 
 function App() {
   return (
     <div className="App">
-hello
-
+      <div className="app_main">
+        <Sidebar />
+        <div style={{width:"100%"}}>
+          <NewNav />
+          <Body />
+        </div>
+      </div>
     </div>
   );
 }

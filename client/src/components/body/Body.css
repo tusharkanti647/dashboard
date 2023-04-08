@@ -1,0 +1,23 @@
+.piechart-polarChart {
+  display: flex;
+}
+.pieChart,
+.polarAreaChart {
+  color: #888888;
+  width: 50%;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #888888;
+  border-radius: 8px;
+}
+
+@media (max-width: 870px) {
+  .piechart-polarChart {
+    display: block;
+  }
+
+  .pieChart,
+  .polarAreaChart {
+    width: 100%;
+  }
+}

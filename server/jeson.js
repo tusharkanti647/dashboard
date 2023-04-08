@@ -19005,7 +19005,7 @@ const arr=[
 
 
 const defoltData= async ()=>{
-    try{
+    try{                  itemModel
         const data= await itemModel.insertMany(arr);
     }catch(err){
         console.log(err);

@@ -14,7 +14,7 @@ const userModel = require("./model/schema");
 //const defoltData=require("./jeson");
 app.use(express.json());
 
-//app.use(cors());
+app.use(cors());
 //we can coonect the router file ushinh this middelwear
 app.use(require("./router/auth"));
 

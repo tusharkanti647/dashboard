@@ -1,0 +1,41 @@
+.sidebar_main{
+    margin-top: 10px;
+    width: 250px;
+    border: 0.5px solid #888888;
+    color: #888888;
+    /* position: fixed; */
+    overflow: scroll;
+}
+
+.dashboard_icon{
+    display: flex;
+    align-items: center;
+    border: #888888 0.5px solid;
+    /* padding: 5px; */
+}
+
+.apps_pages{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border: #888888 0.5px solid;
+}
+
+.apps_pages_icon{
+    display: flex;
+    align-items: center;
+}
+.apps_pages_icon h4{
+    padding: 10px 10px;
+    margin: 0px;
+}
+.apps_pages_icon:hover{
+    cursor: pointer;
+    background-color: rgb(92, 194, 225);
+}
+
+@media (max-width: 1120px) {
+    .sidebar_main{
+        display:none;
+    }
+  }
