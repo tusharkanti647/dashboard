@@ -1,3 +1,13 @@
+.body-main{
+  position: relative;
+  height: vh;
+  /* left: 250px; */
+  /* overflow-y: scroll; */
+  margin-top: 84px;
+  margin-left: 250px;
+  background-color: #EEEEEE;
+}
+
 .piechart-polarChart {
   display: flex;
 }
@@ -11,6 +21,12 @@
   border-radius: 8px;
 }
 
+
+@media (max-width: 1120px){
+  .body-main{
+    margin-left: 0px;
+  }
+}
 @media (max-width: 870px) {
   .piechart-polarChart {
     display: block;

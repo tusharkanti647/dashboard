@@ -1,4 +1,4 @@
-//import "./SignIn.css"
+import "./SidebarModel.css"
 
 // import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -23,16 +23,18 @@ import { useState } from 'react';
 
 const style = {
     // as 'absolute',
+    
     position: 'absolute',
     top: '50%',
-    left: '50%',
+    left: 129,
     transform: 'translate(-50%, -50%)',
+    height:564,
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#DDDDDD',
     border: '2px solid #000',
     boxShadow: 24,
     pt: 2,
-    px: 4,
+    // px: 4,
     pb: 3,
 };
 
@@ -65,42 +67,6 @@ export default function SidebarModel() {
     }
 
 
-    //signin data send to the server
-    //-------------------------------------------------------------------------
-    // const signinUser = async (event) => {
-    //     event.preventDefault();
-    //     const { email, password } = signInData;
-
-
-    //     const respons = await fetch("http://localhost:8000/signin", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         credentials: 'same-origin',
-    //         body: JSON.stringify({ email, password })
-    //     });
-
-    //     //console.log(respons.headers);
-
-    //     const data = await respons.json();
-    //     if (respons.status === 400 || !signInData) {
-    //         alert("no data");
-    //     } else {
-    //         alert("user sucessfull signin");
-    //         //console.log(data);
-    //         localStorage.setItem("token", data.token);
-
-    //         //navigate to home page
-    //         handleClose();
-
-    //         setSignInData({
-    //             ...signInData,
-    //             email: "",
-    //             password: ""
-    //         });
-    //     }
-    // }
-
-
 
 
     //console.log(cookieValue);
@@ -113,17 +79,19 @@ export default function SidebarModel() {
                 aria-label="account of current user"
                 aria-haspopup="true"
                 onClick={handleOpen}
-                color="black">
+                color="black"
+                className="menuIcon-toggle">
                 <MenuIcon style={{ fontSize: 40 }} />
             </IconButton>
 
             <Modal
                 open={open}
                 onClose={handleClose}
+                style={{}}
             >
-                <Box sx={{ ...style, width: 400 }}>
+                <Box  sx={{ ...style, width: 251, }}>
 
-                    <Box className="sidebar_main">
+                    <Box  className="sidebar_main_Model">
                         <div className="dashboard_icon">
                             <AddHomeIcon />
                             <h4>Dashboards</h4>
@@ -157,10 +125,6 @@ export default function SidebarModel() {
                                 <h4>Pages</h4>
                             </div>
                         </Box>
-
-
-
-
 
 
                         <Box className="apps_pages">
@@ -216,10 +180,7 @@ export default function SidebarModel() {
                         </Box>
                     </Box>
 
-
-<div> hello</div>
-
-                    <Button onClick={handleClose}>Close</Button>
+                    <Button onClick={handleClose} style={{color:"#888888"}}>Close</Button>
 
                 </Box>
             </Modal>

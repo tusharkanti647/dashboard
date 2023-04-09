@@ -1,0 +1,22 @@
+.sidebar_main_Model{
+    position: fixed;
+    top: 60px;
+    bottom: 0px;
+    overflow: scroll;
+    background-color: #DDDDDD;
+
+    margin-top: 0px;
+    width: 250px;
+    border: 0.5px solid #888888;
+    color: #888888;
+}
+.menuIcon-toggle svg{
+    display: none;
+}
+
+
+@media (max-width:1120px){
+    .menuIcon-toggle svg{
+        display: block;
+    }
+}

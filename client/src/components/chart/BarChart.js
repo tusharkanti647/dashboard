@@ -19,7 +19,7 @@ ChartJS.register(
     Legend,
 );
 
-function BarChart({ labelArr, dataArr, labelString }) {
+function BarChart({pestleOptions, labelArr, dataArr, labelString, setPestleOption }) {
 
     const data = {
         labels: labelArr,
@@ -34,16 +34,22 @@ function BarChart({ labelArr, dataArr, labelString }) {
         ]
     }
 
-    const options = {
-
-    }
-
+    //console.log(sectorOptions);
     return (<>
-        <div style={{margin:"10px", border:"1px solid #888888", borderRadius:"8px"}}>
-        <h3 style={{display:"flex", color:"#888888", justifyContent:"center"}}>{labelString}</h3>
-            <Bar
+        <div style={{ margin: "10px", border: "1px solid #888888", borderRadius: "8px" }}>
 
-                options={options} data={data} />
+            <div className='filter-container' style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <p style={{ marginRight: "10px" }}>filter</p>
+
+                <label htmlFor="pestle">Pestle:</label>
+                <select id="pestle" name="pestle" onChange={(e) => setPestleOption(e.target.value)} style={{backgroundColor:"#EEEEEE"}}>
+                    <option value={null}></option>
+                    {pestleOptions.map((sector, ind) => <option key={ind} value={sector} >{sector}</option>)}
+                </select>
+            </div>
+
+            <h3 style={{ display: "flex", color: "#888888", justifyContent: "center" }}>{labelString}</h3>
+            <Bar data={data} />
         </div>
 
     </>)

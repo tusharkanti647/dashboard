@@ -1,14 +1,19 @@
 .navbar_container{
+    position: fixed;
+    margin-left: 250px;
     display: flex;
-    width:100%;
+    flex: 1;
+    width:81.5%;
     height: 83px;
+    background-color: #DDDDDD;
+    z-index: 1;
     /* justifyContent: "center", alignItems: "center"  */
 }
 
 header{
     display: flex;
     flex-direction: column;
-    background-color:  white; /* black */
+    background-color: #DDDDDD; /* black */
     width:100%;
     border: 1px solid #888888;
     border-radius: 8px;
@@ -26,6 +31,7 @@ header nav{
     justify-content: space-around;
     align-items: center;
     z-index: 4;
+
 }
 
 
@@ -50,6 +56,7 @@ header > nav > .left input{
     border: none;
     font-size: 14px;
     padding-left: 10px;
+    background-color: #DDDDDD;
 }
 
 header nav .left #search_icon{
@@ -82,11 +89,18 @@ header nav .right{
 
 
 
+@media (max-width:1120px){
+    .navbar_container{
+        margin-left: 0px;
+        width: 100%;
+    }
+}
 
 @media (max-width:800px){
     /* header .hamburgur{
         display: block;
     } */
+    
     header nav{
         overflow: hidden;
     }

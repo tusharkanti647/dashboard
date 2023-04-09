@@ -38,10 +38,7 @@ function PieChart({ sectorDataArr, sectorLabelArr, labelString }) {
     return (<>
         <div className='pieChart' >
             <h3  style={{display:"flex", fontSize:"15px", color: "#888888", justifyContent: "center" }}>{labelString}</h3>
-            {/* <p></p> */}
-            <Pie
-
-                data={data} />
+            <Pie data={data} />
         </div>
 
     </>)

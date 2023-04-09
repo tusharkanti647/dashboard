@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="app_main">
         <Sidebar />
-        <div style={{width:"100%"}}>
+        <div style={{width:"100%", backgroundColor:"#EEEEEE"}}>
           <NewNav />
           <Body />
         </div>
