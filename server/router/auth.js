@@ -11,7 +11,7 @@ const itemModel = require("../model/schema");
 router.get('/filter', async (req, res) => {
     try {
         const topicArr = await itemModel.find({}, { "country": 1, "pestle": 1, "source": 1, "region": 1, "sector": 1, "topic": 1, "_id": 0 });
-
+console.log(topicArr.length);
         res.status(200).send(topicArr);
 
     } catch (e) {
