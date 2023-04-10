@@ -261,26 +261,26 @@ function Body() {
 
     useEffect(() => {
         const fetchCall = async () => {
-            const filterRespons = await fetch("http://localhost:5000/filter");
+            const filterRespons = await fetch("/filter");
             const filterData = await filterRespons.json();
             setFilterArr([...filterData]);
 
-            const barObj = await fetchFun("http://localhost:5000/topics-wise-percentage");
+            const barObj = await fetchFun("/topics-wise-percentage");
             setTopicBar({ ...topicBar, dataArr: barObj.data, labelArr: barObj.label });
 
-            const SectorbarObj = await fetchFun("http://localhost:5000/topics-wise-percentage");
+            const SectorbarObj = await fetchFun("/topics-wise-percentage");
             setSector({ ...sector, sectorDataArr: SectorbarObj.data, sectorLabelArr: SectorbarObj.label });
 
-            const sectorIntensitybarObj = await fetchFunTwoParameters("http://localhost:5000/sector-wise-intensity");
+            const sectorIntensitybarObj = await fetchFunTwoParameters("/sector-wise-intensity");
             setSectorIntensity({ ...sectorIntensity, sectorIntensityDataArr: sectorIntensitybarObj.data, sectorIntensityLabelArr: sectorIntensitybarObj.label });
 
-            const regionCountrybarObj = await fetchFunRegionCountry("http://localhost:5000/region-country");
+            const regionCountrybarObj = await fetchFunRegionCountry("/region-country");
             setRegionCountry({ ...regionCountry, regionCountryDataArr: regionCountrybarObj.data, regionCountryLabelArr: regionCountrybarObj.label });
 
-            const intensityLikelihoodRelevanceObj = await fetchFunIntensityLikelihoodRelevance("http://localhost:5000/year-intensity-likelihood-relevance");
+            const intensityLikelihoodRelevanceObj = await fetchFunIntensityLikelihoodRelevance("/year-intensity-likelihood-relevance");
             setIntensityLikelihoodRelevance({ ...intensityLikelihoodRelevance, intensityLikelihoodRelevanceLabelArr: intensityLikelihoodRelevanceObj.label, intensityDataArr: intensityLikelihoodRelevanceObj.intensityData, likelihoodDataArr: intensityLikelihoodRelevanceObj.likelihoodData, relevanceDataArr: intensityLikelihoodRelevanceObj.relevanceData });
 
-            const pestlebarObj = await fetchFunPestle("http://localhost:5000/pestle-wise-percentage");
+            const pestlebarObj = await fetchFunPestle("/pestle-wise-percentage");
             setPestlebar({ ...pestlebar, pestleDataArr: pestlebarObj.data, pestleLabelArr: pestlebarObj.label });
 
         }
